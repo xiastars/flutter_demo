@@ -351,7 +351,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             margin: EdgeInsets.only(
                 left: ScreenUtil().setWidth(20),
                 top: ScreenUtil().setHeight(120)),
-            child: new CustomPaint(painter: sportLine, willChange: false),
+            child: new CustomPaint( painter: sportLine, willChange: false),
           ),
         ],
       ),
