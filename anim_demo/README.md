@@ -1,16 +1,4 @@
 # anim_demo
-
+![image](https://github.com/xiastars/flutter_demo/blob/master/anim_demo/@RIVGL7H8L%7DSEF@TJ9@3%25UR.gif?raw=true)
 A new Flutter application.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
