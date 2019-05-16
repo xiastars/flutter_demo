@@ -1,4 +1,3 @@
-
 # 一.坑系列
 ### 1.更改package
 要改src/debug/AndroidManifest.xml里的package
@@ -12,6 +11,7 @@
 
 ### 4.变量写在类外
 描述：有一个动画实现我用到了三个类，StatefulWidget,State,CustomPainter，为了让变量共用，我将变量写在类外，如图所示
+
 ```
 int value = 1;
 class XXX extends StatefulWidget{
@@ -20,7 +20,12 @@ class XXX extends StatefulWidget{
 ```
 XXX被pop之后，再返回这个页面,这个value还是100，解决变法，变量写在类里面，在State里，通过widget.value来获取，创建CustomPainter时传入State，也是通过以上的方法取，最简单的做法是在StatefulWidget里定义一个方法，重置所有变量的值
 
-
+### 5. no device
+需要配置android-sdk 和android-studio环境 
+```
+flutter config --android-sdk your path
+flutter coig --android-studio-dir your path
+```
 
 
 # 二.边学边做
@@ -102,6 +107,67 @@ flutter:
 Image.asset('img/first_logo.png',
                   width: 100.0, height: 100.0)
 ```
+
+### 4.Gradient的使用
+A.用在Paint上
+```
+      var gradient = sky.Gradient.linear(Offset(0, 0),Offset(ScreenUtil().setWidth(321.33 * 3.9), 0),
+         [SColors.red_51, SColors.blue_56, SColors.red_oa,SColors.blue_56],
+         [0.1, 0.5, 0.7, 0.9]//每种颜色的区域,
+      );
+      _bezierPaint = new Paint()
+        ..strokeWidth = ScreenUtil().setWidth(18.0)
+        ..style = PaintingStyle.stroke
+        ..color = Color(0xff422117)
+        ..strokeJoin = StrokeJoin.round
+        ..shader = gradient;
+```
+B.用在Widget上
+```
+    var myIndigoGradient = LinearGradient(
+      // Where the linear gradient begins and ends
+      begin: Alignment.topRight,
+      end: Alignment.bottomLeft,
+      // Add one stop for each color. Stops should increase from 0 to 1
+      stops: [0.1, 0.5, 0.7, 0.9],
+      colors: [
+        Colors.yellow[900],
+        Colors.yellow[700],
+        Colors.yellow[600],
+        Colors.yellow[400],
+      ],
+    );
+    return new Container(
+      decoration: new BoxDecoration(
+        gradient: myIndigoGradient,
+      ),
+      alignment: Alignment.centerLeft,
+      child: new CustomPaint(painter: sportLine, willChange: false),
+    );
+```
+### 5.CustomPainter的使用
+
+```
+//指定一条线的path
+path.moveTo(x,y);
+path.lineTo(x1,y1);
+//指定一条曲线的path,x1,y1,x2,y2为控制点，x3.y3为到达点
+path.cubicTo(x1,y1,x2,y2,x3,y3);
+//从起始点到x2,y2的二次曲线，以x1,y1为控制点
+path.quadraticBezierTo(x1,y1,x2,y2);
+//测量曲线长度
+pathMetric = path.computeMetrics(forceClosed:false).first;
+length = pathMetric.length;
+//通过长度获取曲线的偏移位置
+Tangent tangent = pathMetric.getTangentForOffset(pathLength);
+x = tangent.position.dx;
+y = tangent.position.dy;
+//canvas画path
+canvas.drawPath(path,paint);
+//canvas画image
+canvas.drawImage(image,offset,paint);
+```
+
 
 
 # 三.语法熟悉
