@@ -1,0 +1,4 @@
+#Thu May 16 11:09:14 CST 2019
+base.0=F\:\\summerdemo\\flutter_demo\\anim_demo\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex

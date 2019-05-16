@@ -184,3 +184,9 @@ return (partPulse?.arms ?? 0).toString() + "%";
 ```
  PartPulseBean({this.id = 0})
 ```
+
+# 四.包含DEMO
+### 1. anim_demo.dart
+> gradient,anim,paint的 实践
+
+![image](https://github.com/xiastars/flutter_demo/blob/master/anim_demo/@RIVGL7H8L%7DSEF@TJ9@3%25UR.gif?raw=true)
