@@ -189,4 +189,4 @@ return (partPulse?.arms ?? 0).toString() + "%";
 ### 1. anim_demo.dart
 > gradient,anim,paint的 实践
 
-![image](https://github.com/xiastars/flutter_demo/blob/master/anim_demo/@RIVGL7H8L%7DSEF@TJ9@3%25UR.gif?raw=true)
+![image](https://github.com/xiastars/flutter_demo/blob/master/show_file/@RIVGL7H8L%7DSEF@TJ9@3%25UR.gif?raw=true)
