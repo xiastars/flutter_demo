@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///倒计时示例
 class CountDownDialog extends StatefulWidget {
   ValueChanged callback;
 
@@ -37,7 +38,6 @@ class CountDownState extends State<CountDownDialog> {
 
   void startCount(BuildContext context) {
     Future.delayed(new Duration(seconds: 1), () {
-      // sportLine.startAnim();
       count++;
       setState(() {});
     }).then((v) {
