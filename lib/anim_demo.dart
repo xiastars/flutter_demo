@@ -99,8 +99,6 @@ class _AnimPageState extends State<AnimPage> with TickerProviderStateMixin {
       pointY = new List(6);
       currentPosition = new List(2);
 
-
-
       initPath();
 
       //Gradient的用法

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\summerdemo\\flutter_demo\\anim_demo\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "F:\\summerdemo\\flutter_demo\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "F:\\summerdemo\\flutter_demo\\anim_demo\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "F:\\summerdemo\\flutter_demo\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

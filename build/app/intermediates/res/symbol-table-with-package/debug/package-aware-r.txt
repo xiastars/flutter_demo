@@ -1,0 +1,4 @@
+cn.summer.anim_demo
+drawable launch_background
+mipmap ic_launcher
+style LaunchTheme
